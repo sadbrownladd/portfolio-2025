@@ -1,0 +1,128 @@
+
+body {
+    background: #080808;
+    color: white;
+    scroll-behavior: smooth;
+  }
+  .text-highlight {
+    color: #00ffee;
+  }
+  .btn-custom {
+    background: #00ffee;
+    color: black;
+    border-radius: 50px;
+    box-shadow: 0 0 15px #00ffee;
+  }
+  .btn-custom:hover {
+    box-shadow: 0 0 30px #00ffee;
+  }
+  .social-icons a {
+    color: #00ffee;
+    transition: 0.3s ease-in-out;
+  }
+  .social-icons a:hover {
+    color: white;
+    background: #00ffee;
+    border-radius: 50%;
+  }
+  .pfp {
+    padding: 25px;
+    transition: transform 0.2s;
+  }
+  .pfp:hover {
+    transform: scale(1.2);
+  }
+  .para {
+    padding: 0px 150px;
+  }
+  /* Card hover zoom effect */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  .navbar-nav .nav-link {
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  .navbar-nav .nav-link:hover {
+    color: #00ffee !important;
+    border-bottom: 2px solid #00ffee;
+  }
+  :root {
+    --bg-color: #080808;
+    --text-color: white;
+    --highlight-color: #00ffee;
+    --btn-custom-bg: #00ffee;
+    --btn-custom-color: black;
+    --nav-link-color: white;
+    --brand-color: white;
+  }
+  .light-theme {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --highlight-color: #007bff;
+    --btn-custom-bg: #007bff;
+    --btn-custom-color: white;
+    --nav-link-color: #000000;
+    --brand-color: black;
+  }
+
+  body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+  }
+  .text-highlight {
+    color: var(--highlight-color);
+  }
+  .btn-custom {
+    background: var(--btn-custom-bg);
+    color: var(--btn-custom-color);
+    border-radius: 50px;
+    box-shadow: 0 0 15px var(--highlight-color);
+    transition: box-shadow 0.3s ease;
+  }
+  .btn-custom:hover {
+    box-shadow: 0 0 30px var(--highlight-color);
+  }
+  .social-icons a {
+    color: var(--highlight-color);
+    transition: 0.3s ease-in-out;
+  }
+  .social-icons a:hover {
+    color: var(--text-color);
+    background: var(--highlight-color);
+    border-radius: 50%;
+  }
+  .pfp {
+    padding: 25px;
+    transition: transform 0.2s;
+  }
+  .pfp:hover {
+    transform: scale(1.2);
+  }
+  .para {
+    padding: 0px 150px;
+  }
+  /* Navbar link hover effect */
+  .navbar-nav .nav-link {
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    color: var(--nav-link-color) !important;
+  }
+  .navbar-nav .nav-link:hover {
+    color: var(--highlight-color) !important;
+    border-bottom: 2px solid var(--highlight-color);
+  }
+  /* Optional: Style the theme toggle button */
+  #theme-toggle {
+    border: 1px solid var(--highlight-color);
+    color: var(--highlight-color);
+    background: transparent;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  #theme-toggle:hover {
+    background: var(--highlight-color);
+    color: var(--btn-custom-color);
+  }
