@@ -1,128 +1,344 @@
-
+/* General Styles */
 body {
-    background: #080808;
-    color: white;
-    scroll-behavior: smooth;
+  background: #080808;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* Mobile First Approach */
+.text-highlight {
+  color: #00ffee;
+}
+
+/* Buttons */
+.btn-custom {
+  background: #00ffee;
+  color: black;
+  border-radius: 50px;
+  box-shadow: 0 0 15px #00ffee;
+  transition: box-shadow 0.3s ease;
+}
+
+.btn-custom:hover {
+  box-shadow: 0 0 30px #00ffee;
+}
+
+/* Social Icons */
+.social-icons a {
+  color: #00ffee;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: white;
+  background: #00ffee;
+  border-radius: 50%;
+}
+
+/* Profile Picture */
+.pfp {
+  padding: 15px;
+  transition: transform 0.2s;
+  max-width: 100%;
+}
+
+.pfp:hover {
+  transform: scale(1.1);
+}
+
+/* Paragraphs */
+.para {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar */
+.navbar-nav .nav-link {
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00ffee !important;
+  border-bottom: 2px solid #00ffee;
+}
+
+/* Theme Variables */
+:root {
+  --bg-color: #080808;
+  --text-color: white;
+  --highlight-color: #00ffee;
+  --btn-custom-bg: #00ffee;
+  --btn-custom-color: black;
+  --nav-link-color: white;
+  --brand-color: white;
+}
+
+.light-theme {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --highlight-color: #007bff;
+  --btn-custom-bg: #007bff;
+  --btn-custom-color: white;
+  --nav-link-color: #000000;
+  --brand-color: black;
+}
+
+/* Apply Theme Colors */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Responsive Adjustments (Mobile-First) */
+
+/* Small Screens (Phones) */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px;
   }
-  .text-highlight {
-    color: #00ffee;
-  }
-  .btn-custom {
-    background: #00ffee;
-    color: black;
-    border-radius: 50px;
-    box-shadow: 0 0 15px #00ffee;
-  }
-  .btn-custom:hover {
-    box-shadow: 0 0 30px #00ffee;
-  }
-  .social-icons a {
-    color: #00ffee;
-    transition: 0.3s ease-in-out;
-  }
-  .social-icons a:hover {
-    color: white;
-    background: #00ffee;
-    border-radius: 50%;
-  }
-  .pfp {
-    padding: 25px;
-    transition: transform 0.2s;
-  }
-  .pfp:hover {
-    transform: scale(1.2);
-  }
-  .para {
-    padding: 0px 150px;
-  }
-  /* Card hover zoom effect */
-  .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  }
-  .navbar-nav .nav-link {
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-  }
-  .navbar-nav .nav-link:hover {
-    color: #00ffee !important;
-    border-bottom: 2px solid #00ffee;
-  }
-  :root {
-    --bg-color: #080808;
-    --text-color: white;
-    --highlight-color: #00ffee;
-    --btn-custom-bg: #00ffee;
-    --btn-custom-color: black;
-    --nav-link-color: white;
-    --brand-color: white;
-  }
-  .light-theme {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --highlight-color: #007bff;
-    --btn-custom-bg: #007bff;
-    --btn-custom-color: white;
-    --nav-link-color: #000000;
-    --brand-color: black;
+  
+  .navbar-nav {
+    text-align: center;
   }
 
-  body {
-    background: var(--bg-color);
-    color: var(--text-color);
-    scroll-behavior: smooth;
-  }
-  .text-highlight {
-    color: var(--highlight-color);
-  }
-  .btn-custom {
-    background: var(--btn-custom-bg);
-    color: var(--btn-custom-color);
-    border-radius: 50px;
-    box-shadow: 0 0 15px var(--highlight-color);
-    transition: box-shadow 0.3s ease;
-  }
-  .btn-custom:hover {
-    box-shadow: 0 0 30px var(--highlight-color);
-  }
-  .social-icons a {
-    color: var(--highlight-color);
-    transition: 0.3s ease-in-out;
-  }
-  .social-icons a:hover {
-    color: var(--text-color);
-    background: var(--highlight-color);
-    border-radius: 50%;
-  }
   .pfp {
-    padding: 25px;
-    transition: transform 0.2s;
+    width: 180px;
+    padding: 5px;
   }
-  .pfp:hover {
-    transform: scale(1.2);
+
+  .para {
+    padding: 5px;
+    font-size: 14px;
   }
+
+  .btn-custom {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .progress {
+    height: 10px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+
+  /* Cards should be stacked */
+  .card {
+    margin-bottom: 15px;
+  }
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .pfp {
+    width: 220px;
+  }
+
+  .para {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .btn-custom {
+    font-size: 16px;
+  }
+  
+  .progress {
+    height: 12px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Large Screens (Laptops) */
+@media (max-width: 992px) {
+  .pfp {
+    width: 250px;
+  }
+
+  .para {
+    padding: 20px;
+    font-size: 18px;
+  }
+}
+/* Theme Toggle Button */
+#theme-toggle {
+  border: 2px solid var(--highlight-color);
+  background: var(--highlight-color);
+  color: var(--btn-custom-color);
+  padding: 8px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+/* Theme Toggle Hover Effect */
+#theme-toggle:hover {
+  background: transparent;
+  color: var(--highlight-color);
+}
+
+/* Light Theme Adjustments */
+.light-theme #theme-toggle {
+  background: black;
+  color: white;
+  border-color: white;
+}
+
+.light-theme #theme-toggle:hover {
+  background: white;
+  color: black;
+}
+
+/* Extra Large Screens (Desktops) */
+@media (min-width: 1200px) {
   .para {
     padding: 0px 150px;
   }
-  /* Navbar link hover effect */
-  .navbar-nav .nav-link {
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    color: var(--nav-link-color) !important;
+}
+/* General Styles */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+/* Navbar - Frosty Look */
+.navbar {
+  backdrop-filter: blur(10px); /* Frosty Effect */
+  background: rgba(0, 0, 0, 0.6); /* Dark transparent */
+  transition: background 0.3s ease;
+}
+
+/* Navbar Text in Dark Mode */
+.navbar .nav-link,
+.navbar-brand {
+  color: white !important;
+}
+
+/* Navbar in Light Mode */
+.light-theme .navbar {
+  background: rgba(255, 255, 255, 0.6); /* Light transparent */
+}
+
+.light-theme .navbar .nav-link,
+.light-theme .navbar-brand {
+  color: black !important; /* Ensure visibility */
+}
+
+/* Hero Section - Ensure Proper Spacing */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding-top: 90px; /* Adjusted to avoid navbar overlap */
+}
+/* Hero Section - Ensuring Proper Spacing & Alignment */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding-top: 90px; /* Prevents navbar overlap */
+}
+
+/* Hero Section Paragraph */
+.para {
+  padding: 10px 20px; /* Adds proper spacing */
+  text-align: justify; /* Justifies text for better readability */
+  max-width: 80%; /* Prevents it from stretching too wide */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Adjustments for Small Screens */
+@media (max-width: 576px) {
+  .para {
+    padding: 10px;
+    font-size: 0.9rem; /* Slightly smaller text for better fit */
+    line-height: 1.4;
+    max-width: 90%;
   }
-  .navbar-nav .nav-link:hover {
-    color: var(--highlight-color) !important;
-    border-bottom: 2px solid var(--highlight-color);
+}
+
+/* Adjustments for Tablets */
+@media (max-width: 768px) {
+  .para {
+    max-width: 85%;
+    font-size: 1rem;
   }
-  /* Optional: Style the theme toggle button */
-  #theme-toggle {
-    border: 1px solid var(--highlight-color);
-    color: var(--highlight-color);
-    background: transparent;
-    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  border: 2px solid var(--highlight-color);
+  background: var(--highlight-color);
+  color: var(--btn-custom-color);
+  padding: 8px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background: transparent;
+  color: var(--highlight-color);
+}
+
+/* Light Theme Adjustments */
+.light-theme #theme-toggle {
+  background: black;
+  color: white;
+  border-color: white;
+}
+
+.light-theme #theme-toggle:hover {
+  background: white;
+  color: black;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px;
   }
-  #theme-toggle:hover {
-    background: var(--highlight-color);
-    color: var(--btn-custom-color);
+
+  #home {
+    padding-top: 100px; /* Prevents navbar collision */
   }
+}
+
+@media (max-width: 768px) {
+  #home {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 992px) {
+  #home {
+    padding-top: 130px;
+  }
+}
